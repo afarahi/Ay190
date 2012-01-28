@@ -1,0 +1,5 @@
+A simple compile and link should produce an executable.
+for example, with the gfortran compiler an the public_pp123.f90
+network
+% gfortran -o pp123 public_pp123.f90
+
