@@ -1,0 +1,22 @@
+  0.0200000000                      ! particle separation
+  30.000    0.50    1000000    -1    ! tmax, tout, nmax, nout
+1.4                                 ! gamma 
+ 3 1.000                            ! type of energy equation, polyk(for iener=0)
+ 0   1000000   250                  ! type of cty equation (0:direct sum 1:time deriv), ndirect, maxdensits
+ 0                                  ! type of pressure term (0:normal 1:pa+pb/rhoa*rhob 2:hernquist/katz )
+ 2 0.000  0.000  0.000  2.000       ! viscosity type, alpha(min), alphau(min), alphab(min), beta
+       2      0      0  0.100       ! use av, au, ab limiter, constant for this(0.1-0.2)
+3                                   ! type of kernel averaging (1:average h, 2:average grad wab 3:springel/hernquist)
+ 3 1.200   1.000E-04                ! variable h, initial h factor, h tolerance
+ 1                                  ! dump ghost particles? (0: no 1: yes)
+ 0    2                             ! magnetic field (0:off 1:on) and force algorithm(1:vector 2:tensor)
+ 0  0.100                           ! divergence correction method (0:none 1:projection 2: hyperbolic/parabolic)
+0  0.000                            ! resistivity (0:off 1:on), eta
+0  0.000                            ! use xsph, parameter
+ 0 0.000E+00                        ! self-gravity, fixed softening length
+ 0.0000  0.0000  0.0000             ! artificial damping (0.0 or few percent)
+ 3                                  ! kernel type (0: cubic spline, 3:quintic)
+ 0                                  ! external force (1: toy star, 2:1/r^2 )
+  0.300    0.250                    ! C_cour, C_force
+F                                   ! Use number density formulation of gradh
+0 1.000E+04                         ! particle splitting, critical density
